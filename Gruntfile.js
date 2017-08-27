@@ -38,6 +38,20 @@ module.exports = function (grunt) {
                 }
             }
         },
+        concat: {
+            bootstrap: {
+                src: ['node_modules/bootstrap-sass/assets/javascripts/bootstrap/*.js'],
+                dest: 'dist/lib/bootstrap.js'
+            }
+        },
+        copy: {
+            fonts: {
+                expand: true,
+                cwd: 'node_modules/bootstrap-sass/assets/fonts/bootstrap/',
+                src: ['**'],
+                dest: 'fonts/bootstrap/'
+            }
+        },
         watch: {
             scripts: {
                 files: ["./scripts/**/*.*", "./styles/**/*.scss"],
@@ -49,7 +63,9 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks("grunt-browserify");
     grunt.loadNpmTasks("grunt-contrib-watch");
     grunt.loadNpmTasks("grunt-contrib-sass");
+    grunt.loadNpmTasks("grunt-contrib-concat");
+    grunt.loadNpmTasks("grunt-contrib-copy");
 
-    grunt.registerTask("default", ["watch"]);
-    grunt.registerTask("build", ["browserify", "sass:dist"]);
+    grunt.registerTask("default", ["browserify", "sass:dev", "concat", "copy", "watch"]);
+    grunt.registerTask("build", ["browserify", "sass:dist", "concat", "copy"]);
 };
