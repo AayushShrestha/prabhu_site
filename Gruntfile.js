@@ -18,9 +18,7 @@ module.exports = function (grunt) {
             // this is the "dev" Sass config used with "grunt watch" command
             dev: {
                 options: {
-                    style: 'expanded',
-                    // tell Sass to look in the Bootstrap stylesheets directory when compiling
-                    loadPath: 'node_modules/bootstrap-sass/assets/stylesheets'
+                    style: 'expanded'
                 },
                 files: {
                     // the first path is the output and the second is the input
@@ -30,18 +28,11 @@ module.exports = function (grunt) {
             // this is the "production" Sass config used with the "grunt buildcss" command
             dist: {
                 options: {
-                    style: 'compressed',
-                    loadPath: 'node_modules/bootstrap-sass/assets/stylesheets'
+                    style: 'compressed'
                 },
                 files: {
                     'dist/css/mystyle.css': 'styles/mystyle.scss'
                 }
-            }
-        },
-        concat: {
-            bootstrap: {
-                src: ['node_modules/bootstrap-sass/assets/javascripts/bootstrap/*.js'],
-                dest: 'dist/lib/bootstrap.js'
             }
         },
         copy: {
@@ -50,11 +41,17 @@ module.exports = function (grunt) {
                 cwd: 'node_modules/bootstrap-sass/assets/fonts/bootstrap/',
                 src: ['**'],
                 dest: 'fonts/bootstrap/'
+            },
+            bootstrapJs: {
+                expand: true,
+                cwd: 'node_modules/bootstrap/dist/js/',
+                src: ['*.js'],
+                dest: 'dist/lib/'
             }
         },
         watch: {
             scripts: {
-                files: ["./scripts/**/*.*", "./styles/**/*.scss"],
+                files: ["./scripts/**/*.*", "./styles/**/*.scss", "index.html"],
                 tasks: ["browserify", "sass:dev"]
             }
         }
@@ -63,9 +60,8 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks("grunt-browserify");
     grunt.loadNpmTasks("grunt-contrib-watch");
     grunt.loadNpmTasks("grunt-contrib-sass");
-    grunt.loadNpmTasks("grunt-contrib-concat");
     grunt.loadNpmTasks("grunt-contrib-copy");
 
-    grunt.registerTask("default", ["browserify", "sass:dev", "concat", "copy", "watch"]);
-    grunt.registerTask("build", ["browserify", "sass:dist", "concat", "copy"]);
+    grunt.registerTask("default", ["browserify", "sass:dev", "copy", "watch"]);
+    grunt.registerTask("build", ["browserify", "sass:dist", "copy"]);
 };
