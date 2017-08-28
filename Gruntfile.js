@@ -47,6 +47,30 @@ module.exports = function (grunt) {
                 cwd: 'node_modules/bootstrap/dist/js/',
                 src: ['*.js'],
                 dest: 'dist/lib/'
+            },
+            bootstrapCss: {
+                expand: true,
+                cwd: 'node_modules/bootstrap/dist/css/',
+                src: ['bootstrap.min.css'],
+                dest: 'dist/css/'
+            },
+            jquery: {
+                expand: true,
+                cwd: 'node_modules/jquery/dist/',
+                src: ['jquery.min.js'],
+                dest: 'dist/lib/'
+            },
+            popper: {
+                expand: true,
+                cwd: 'node_modules/popper.js/dist/umd/',
+                src: ['popper.js'],
+                dest: 'dist/lib/'
+            },
+            jqueryEasing: {
+                expand: true,
+                cwd: 'node_modules/jquery.easing/',
+                src: ['jquery.easing.min.js'],
+                dest: 'dist/lib/'
             }
         },
         watch: {
