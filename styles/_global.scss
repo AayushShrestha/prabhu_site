@@ -49,4 +49,12 @@ section {
     h2 {
         font-size: 50px;
     }
+    h2.section-heading {
+        font-size: 45px;
+        font-weight: 800;
+        color: $theme-primary;
+        span {
+            border-bottom: 10px solid;
+        }
+    }
 }

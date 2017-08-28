@@ -16,7 +16,7 @@
 
 .btn-outline {
     color: white;
-    border: 1px solid;
+    border: 2px solid;
     border-color: white;
     &:hover,
     &:focus,
@@ -28,12 +28,58 @@
     }
 }
 
+.btn-outline-primary {
+    color: $theme-primary;
+    border: 2px solid;
+    border-color: $theme-primary;
+    &:hover,
+    &:focus,
+    &:active,
+    &.active {
+        color: $theme-primary;
+        border-color: $theme-primary;
+        background-color: $gray-lighter;
+    }
+}
+
 .btn {
-    border-radius: 300px;
+    border-radius: 0px;
     @include alt-font;
 }
 
 .btn-xl {
     font-size: 11px;
     padding: 15px 45px;
+}
+
+.carousel {
+    .carousel-indicators li {
+        background-color: #e3e3e3;
+    }
+
+    .carousel-indicators .active {
+        background-color: #6e6f6f;
+    }
+    .carousel-item {
+        padding: 30px 0;
+        div.col-lg-4 {
+            text-align: center;
+        }
+        div.col-lg-8 {
+            padding-top: 50px;
+            text-align: left;
+        }
+        .carousel-image {
+            text-align: center;
+            width: 300px;
+            height: 300px;
+            border: 10px solid white;
+            -webkit-box-shadow:  5px 5px 15px rgba(0,0,0,0.4);
+            -moz-box-shadow:  5px 5px 15px rgba(0,0,0,0.4);
+            box-shadow:  5px 5px 15px rgba(0,0,0,0.4);
+            -webkit-border-radius: 100%;
+            -moz-border-radius: 100%;
+            border-radius:100%;
+        }
+    }
 }

@@ -22,6 +22,7 @@
             > a {
                 font-size: 11px;
                 @include alt-font;
+                @include text-shadow;
                 &.active {
                     color: $theme-primary !important;
                     background-color: transparent;
@@ -58,7 +59,7 @@
         }
         &.navbar-shrink {
             border-color: fade-out($gray-darker, .9);
-            background-color: white;
+            background-color: $theme-primary;
             .navbar-brand {
                 color: $gray-darker;
                 &:hover,
@@ -68,9 +69,9 @@
             }
             .navbar-nav > li > a,
             .navbar-nav > li > a:focus {
-                color: $gray-darker;
+                color: fade-out(white, .3);
                 &:hover {
-                    color: $theme-primary;
+                    color: white;
                 }
             }
         }
