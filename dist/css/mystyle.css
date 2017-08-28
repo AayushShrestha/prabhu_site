@@ -110,7 +110,7 @@ section h2.section-heading span {
   font-family: 'Open Sans', 'Lato', 'Helvetica', 'Arial', 'sans-serif';
   letter-spacing: 2px;
   text-transform: uppercase;
-  font-weight: 800;
+  font-weight: 600;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
 }
 #mainNav .navbar-nav > li > a.active {
@@ -195,21 +195,21 @@ header.masthead .device-container {
 header.masthead .device-container .screen img {
   border-radius: 3px;
 }
-header.masthead .corridor a.btn {
+header.masthead .corridor .btn {
   width: 70%;
   position: relative;
   border-width: 2px;
 }
-header.masthead .corridor a.btn h2 {
+header.masthead .corridor .btn h2 {
   font-weight: 700;
 }
-header.masthead .corridor a.btn p {
+header.masthead .corridor .btn p {
   font-weight: 100;
   font-size: 20px;
   letter-spacing: 0;
   margin: 0;
 }
-header.masthead .corridor a#nepal:before {
+header.masthead .corridor #nepal:before {
   content: '';
   width: 20%;
   height: 100%;
@@ -218,7 +218,7 @@ header.masthead .corridor a#nepal:before {
   top: 0;
   left: 0;
 }
-header.masthead .corridor a#india:before {
+header.masthead .corridor #india:before {
   content: '';
   width: 20%;
   height: 100%;
@@ -431,6 +431,12 @@ footer .disclaimer {
   color: #777777;
 }
 
+#exchange-rate {
+  text-align: center;
+  color: #bb0f00;
+  font-weight: 600;
+}
+
 .bg-primary {
   background: #bb0f00;
   background: -webkit-linear-gradient(#bb0f00, #a20d00);
@@ -450,6 +456,7 @@ footer .disclaimer {
   color: white;
   border: 2px solid;
   border-color: white;
+  background: transparent;
 }
 .btn-outline:hover, .btn-outline:focus, .btn-outline:active, .btn-outline.active {
   color: white;
@@ -473,7 +480,7 @@ footer .disclaimer {
   font-family: 'Open Sans', 'Lato', 'Helvetica', 'Arial', 'sans-serif';
   letter-spacing: 2px;
   text-transform: uppercase;
-  font-weight: 800;
+  font-weight: 600;
 }
 
 .btn-xl {
@@ -508,6 +515,12 @@ footer .disclaimer {
   -webkit-border-radius: 100%;
   -moz-border-radius: 100%;
   border-radius: 100%;
+}
+
+.form-control-lg, .input-group-lg > .form-control, .input-group-lg > .input-group-addon, .input-group-lg > .input-group-btn > .btn {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
 }
 
 /*# sourceMappingURL=mystyle.css.map */

@@ -31,7 +31,7 @@ header.masthead {
     }
 
     .corridor {
-        a.btn {
+        .btn {
             width: 70%;
             position: relative;
             border-width: 2px;
@@ -47,7 +47,7 @@ header.masthead {
             }
         }
         
-        a#nepal:before {
+        #nepal:before {
             content: '';
             width: 20%;
             height: 100%;
@@ -57,7 +57,7 @@ header.masthead {
             left: 0;
         }
 
-        a#india:before {
+        #india:before {
             content: '';
             width: 20%;
             height: 100%;

@@ -88,17 +88,17 @@
 
                     <div class="row h-100 corridor">
                         <div class="col-lg-6">
-                            <a href="#download" id="nepal" class="btn btn-outline btn-lg js-scroll-trigger float-right">
+                            <button id="nepal" data-toggle="modal" data-target="#calculator" data-whatever="Nepal" class="btn btn-outline btn-lg js-scroll-trigger float-right">
                                 <h2>TO NEPAL</h2>
                                 <p>1.00USD = 104.53NPR</p>
-                            </a>
+                            </button>
                         </div>
 
                         <div class="col-lg-6">
-                            <a href="#download" id="india" class="btn btn-outline btn-lg js-scroll-trigger float-left">
+                            <button data-toggle="modal" data-target="#calculator" data-whatever="India" id="india" class="btn btn-outline btn-lg js-scroll-trigger float-left">
                                 <h2>TO INDIA</h2>
                                 <p>1.00USD = 104.53NPR</p>
-                            </a>
+                            </button>
                         </div>
                     </div>
 
@@ -293,6 +293,74 @@
         </div>
     </div>
 </footer>
+
+<div class="modal fade" id="calculator" tabindex="-1" role="dialog" aria-labelledby="calculatorLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                <form>
+                    <div class="form-group text-center">
+                        <label for="country" class="form-control-label">Select Country:</label>
+                        <select name="country" id="country" class="form-control">
+                            <option value="nepal">Nepal</option>
+                            <option value="india">India</option>
+                        </select>
+                    </div>
+                    <hr>
+                    <br>
+                    <div class="form-group text-center">
+                        <label for="exchange-rate" class="form-control-label">Guaranteed Exchange Rate:</label>
+                        <input class="form-control-plaintext w-100 form-control-lg" readonly name="exchange-rate" id="exchange-rate" value="1.00  USD = 101.21  NPR">
+                    </div>
+                    <hr>
+                    <br>
+                    <div class="form-group text-center">
+                        <div class="input-group input-group-lg">
+                            <input type="currency" name="USD" id="USD" value="0.00" class="form-control text-right">
+                            <span class="input-group-addon">USD</span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="input-group input-group-lg">
+                            <input type="currency" name="NPR" id="NPR" value="0.00" class="form-control text-right">
+                            <span class="input-group-addon">NPR</span>
+                        </div>
+                    </div>
+
+                    <hr>
+                    <br>
+
+                    <table class="table">
+                        <tr>
+                            <td>You Send (USD)</td>
+                            <td>0.00</td>
+                        </tr>
+
+                        <tr>
+                            <td>Transfer Fee (USD)</td>
+                            <td>0.00</td>
+                        </tr>
+
+                        <tr>
+                            <td><b>Your Total Amount (USD)</b></td>
+                            <td>0.00</td>
+                        </tr>
+
+                        <tr>
+                            <td><b>Recipient Receives (NPR)</b></td>
+                            <td>0.00</td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+            <div class="modal-footer text-center">
+                <button type="button" class="btn btn-outline-primary">Send money</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
 
 <!-- Bootstrap core JavaScript -->
 <script src="node_modules/jquery/dist/jquery.min.js"></script>
