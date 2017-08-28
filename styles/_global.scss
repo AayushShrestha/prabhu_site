@@ -58,3 +58,23 @@ section {
         }
     }
 }
+
+.border-gray-light {
+    border-color: fade-out($gray-dark, 0.5) !important;
+}
+
+.border-right-1 {
+    border-right: 1px solid;
+}
+
+.border-left-1 {
+    border-left: 1px solid;
+}
+
+.border-top-1 {
+    border-top: 1px solid;
+}
+
+.border-bottom-1 {
+    border-bottom: 1px solid;
+}

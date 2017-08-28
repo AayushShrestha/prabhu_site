@@ -1,26 +1,43 @@
 // Styling for the footer
 footer {
-    padding: 25px 0;
-    text-align: center;
-    color: fade-out(white, .7);
-    background-color: $gray-darker;
+    padding: 100px 0;
+    text-align: left;
+    color: black;
+    background-color: $gray-lighter;
+    border-top: 10px solid $theme-primary;
     p {
         font-size: 12px;
         margin: 0;
     }
-    ul {
+    h3.footer-heading {
+        font-weight:100;
+        letter-spacing: 0;
+        font-size: 25px;
+        margin-bottom: 30px;
+    }
+    ul.footer-menu {
         margin-bottom: 0;
+        list-style-type: none;
+        padding: 0;
         li {
             a {
-                font-size: 12px;
-                color: fade-out(white, .7);
+                font-size: 15px;
+                color: $gray-light;
+                line-height: 2em;
+                font-weight: 600;
                 &:hover,
                 &:focus,
                 &:active,
                 &.active {
                     text-decoration: none;
+                    color: $theme-primary;
                 }
             }
         }
+    }
+
+    .disclaimer {
+        font-size: 12px;
+        color: $gray-light;
     }
 }
