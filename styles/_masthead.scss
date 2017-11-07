@@ -67,21 +67,40 @@ header.masthead {
             left: 0;
         }
     }
-    @media (min-width: 992px) {
-        height: 85vh;
+    @media (max-width: 992px) {
         min-height: 600px;
-        padding-top: 0;
-        padding-bottom: 0;
         .header-content {
             margin-bottom: 0;
 
             text-align: center;
             h1 {
-                font-size: 50px;
+                font-size: 40px;
             }
+            .values {
+                position: relative;
+                margin-bottom: 50px;
+                img {
+                    float: left;
+                    position: absolute;
+                    left: 10%;
+                }
+
+                p {
+                    padding: 5% 0 0 25%;
+
+                }
+            }
+
+            .corridor button {
+                float: none!important;
+                margin-bottom: 30px;
+            }
+
         }
         .device-container {
             max-width: 325px;
         }
     }
 }
+
+

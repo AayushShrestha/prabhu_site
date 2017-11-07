@@ -60,6 +60,11 @@ section h2.section-heading {
 section h2.section-heading span {
   border-bottom: 10px solid;
 }
+@media (max-width: 992px) {
+  section h2.section-heading {
+    font-size: 25px;
+  }
+}
 
 .border-gray-light {
   border-color: rgba(51, 51, 51, 0.5) !important;
@@ -79,6 +84,12 @@ section h2.section-heading span {
 
 .border-bottom-1 {
   border-bottom: 1px solid;
+}
+
+@media (max-width: 992px) {
+  section.support > .container .support-large-icon {
+    display: none;
+  }
 }
 
 #mainNav {
@@ -103,7 +114,10 @@ section h2.section-heading span {
 #mainNav .navbar-toggler {
   font-size: 12px;
   padding: 8px 10px;
-  color: #222222;
+  color: white;
+}
+#mainNav .navbar-collapse .navbar-nav > li {
+  text-align: center;
 }
 #mainNav .navbar-nav > li > a {
   font-size: 11px;
@@ -122,7 +136,7 @@ section h2.section-heading span {
 }
 #mainNav .navbar-nav > li > a,
 #mainNav .navbar-nav > li > a:focus {
-  color: #222222;
+  color: white;
 }
 #mainNav .navbar-nav > li > a:hover,
 #mainNav .navbar-nav > li > a:focus:hover {
@@ -164,6 +178,11 @@ section h2.section-heading span {
   #mainNav.navbar-shrink .navbar-nav > li > a:hover,
   #mainNav.navbar-shrink .navbar-nav > li > a:focus:hover {
     color: rgba(255, 255, 255, 0.7);
+  }
+}
+@media (max-width: 992px) {
+  #mainNav {
+    background-color: #bb0f00 !important;
   }
 }
 
@@ -227,19 +246,32 @@ header.masthead .corridor #india:before {
   top: 0;
   left: 0;
 }
-@media (min-width: 992px) {
+@media (max-width: 992px) {
   header.masthead {
-    height: 85vh;
     min-height: 600px;
-    padding-top: 0;
-    padding-bottom: 0;
   }
   header.masthead .header-content {
     margin-bottom: 0;
     text-align: center;
   }
   header.masthead .header-content h1 {
-    font-size: 50px;
+    font-size: 40px;
+  }
+  header.masthead .header-content .values {
+    position: relative;
+    margin-bottom: 50px;
+  }
+  header.masthead .header-content .values img {
+    float: left;
+    position: absolute;
+    left: 10%;
+  }
+  header.masthead .header-content .values p {
+    padding: 5% 0 0 25%;
+  }
+  header.masthead .header-content .corridor button {
+    float: none !important;
+    margin-bottom: 30px;
   }
   header.masthead .device-container {
     max-width: 325px;
@@ -271,11 +303,6 @@ section.video div#video-thumbnail a#video-link {
 }
 section.video div#video-thumbnail a#video-link:hover, section.video div#video-thumbnail a#video-link:focus {
   background: url(../../images/play_video_icon.png) center center no-repeat, rgba(0, 0, 0, 0.4);
-}
-@media (min-width: 768px) {
-  section.video h2 {
-    font-size: 45px;
-  }
 }
 
 section.features .section-heading {
@@ -425,6 +452,11 @@ footer ul.footer-menu li a {
 footer ul.footer-menu li a:hover, footer ul.footer-menu li a:focus, footer ul.footer-menu li a:active, footer ul.footer-menu li a.active {
   text-decoration: none;
   color: #bb0f00;
+}
+@media (max-width: 992px) {
+  footer div.col-md-3 > p {
+    text-align: center;
+  }
 }
 footer .disclaimer {
   font-size: 12px;

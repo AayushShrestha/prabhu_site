@@ -56,6 +56,10 @@ section {
         span {
             border-bottom: 10px solid;
         }
+
+        @media (max-width: 992px) {
+            font-size: 25px;
+        }
     }
 }
 
@@ -77,4 +81,14 @@ section {
 
 .border-bottom-1 {
     border-bottom: 1px solid;
+}
+
+section.support {
+    >.container {
+        .support-large-icon {
+            @media (max-width: 992px) {
+                display: none;
+            }
+        }
+    }
 }

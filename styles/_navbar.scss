@@ -15,7 +15,15 @@
     .navbar-toggler {
         font-size: 12px;
         padding: 8px 10px;
-        color: $gray-darker;
+        color: white;
+    }
+    
+    .navbar-collapse {
+        .navbar-nav {
+            >li {
+                text-align: center;
+            }
+        }
     }
     .navbar-nav {
         > li {
@@ -33,7 +41,7 @@
             }
             > a,
             > a:focus {
-                color: $gray-darker;
+                color: white;
                 &:hover {
                     color: $theme-primary;
                 }
@@ -75,5 +83,9 @@
                 }
             }
         }
+    }
+
+    @media (max-width: 992px) {
+        background-color: $theme-primary!important;
     }
 }
