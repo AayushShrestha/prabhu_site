@@ -86,7 +86,7 @@ header.masthead {
                 }
 
                 p {
-                    padding: 5% 0 0 25%;
+                    padding: 3% 0 0 20%;
 
                 }
             }
@@ -99,6 +99,40 @@ header.masthead {
         }
         .device-container {
             max-width: 325px;
+        }
+    }
+
+    @media (max-width: 440px) {
+        .header-content {
+            h1 {
+                font-size: 30px;
+            }
+
+            .values {
+                margin-bottom: 30px;
+                img {
+                    width: 50px;
+                    left: 7%;
+                }
+
+                p {
+                    padding-top: 0;
+                }
+            }
+        }
+
+        .corridor {
+
+            .btn {
+                width: 90%;
+                h2 {
+                    font-size: 1.5rem;
+                }
+                p {
+                    font-size: 15px!important;
+                }
+            }
+
         }
     }
 }

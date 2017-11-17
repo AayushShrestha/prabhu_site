@@ -61,8 +61,19 @@ section h2.section-heading span {
   border-bottom: 10px solid;
 }
 @media (max-width: 992px) {
+  section {
+    padding: 50px 0;
+  }
   section h2.section-heading {
     font-size: 25px;
+  }
+}
+@media (max-width: 440px) {
+  section {
+    padding: 30px 0;
+  }
+  section h2.section-heading {
+    font-size: 18px;
   }
 }
 
@@ -267,7 +278,7 @@ header.masthead .corridor #india:before {
     left: 10%;
   }
   header.masthead .header-content .values p {
-    padding: 5% 0 0 25%;
+    padding: 3% 0 0 20%;
   }
   header.masthead .header-content .corridor button {
     float: none !important;
@@ -277,10 +288,33 @@ header.masthead .corridor #india:before {
     max-width: 325px;
   }
 }
+@media (max-width: 440px) {
+  header.masthead .header-content h1 {
+    font-size: 30px;
+  }
+  header.masthead .header-content .values {
+    margin-bottom: 30px;
+  }
+  header.masthead .header-content .values img {
+    width: 50px;
+    left: 7%;
+  }
+  header.masthead .header-content .values p {
+    padding-top: 0;
+  }
+  header.masthead .corridor .btn {
+    width: 90%;
+  }
+  header.masthead .corridor .btn h2 {
+    font-size: 1.5rem;
+  }
+  header.masthead .corridor .btn p {
+    font-size: 15px !important;
+  }
+}
 
 section.video {
   position: relative;
-  padding: 90px 0;
 }
 section.video div#video-thumbnail {
   border: 10px solid white;
