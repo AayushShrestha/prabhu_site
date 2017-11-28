@@ -1,0 +1,18 @@
+
+section.partners {
+  .partner-logo {
+    padding: 5px;
+    text-align: center;
+    .partner-logo-img {
+      max-width: 100%;
+    }
+    opacity: 0.8;
+    &:hover {
+      opacity: 1;
+      -webkit-box-shadow: 0px 0px 10px 0px #ccc;
+      -moz-box-shadow: 0px 0px 10px 0px #ccc;
+      box-shadow: 0px 0px 10px 0px #ccc;
+      text-decoration: none;
+    }
+  }
+}

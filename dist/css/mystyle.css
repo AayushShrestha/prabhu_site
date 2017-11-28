@@ -340,6 +340,22 @@ section.video div#video-thumbnail a#video-link:hover, section.video div#video-th
   background: url(../../images/play_video_icon.png) center center no-repeat, rgba(0, 0, 0, 0.4);
 }
 
+section.partners .partner-logo {
+  padding: 5px;
+  text-align: center;
+  opacity: 0.8;
+}
+section.partners .partner-logo .partner-logo-img {
+  max-width: 100%;
+}
+section.partners .partner-logo:hover {
+  opacity: 1;
+  -webkit-box-shadow: 0px 0px 10px 0px #ccc;
+  -moz-box-shadow: 0px 0px 10px 0px #ccc;
+  box-shadow: 0px 0px 10px 0px #ccc;
+  text-decoration: none;
+}
+
 section.features .section-heading {
   margin-bottom: 100px;
 }
