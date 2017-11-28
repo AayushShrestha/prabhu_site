@@ -128,6 +128,7 @@ section h2.section-heading span {
   color: white;
 }
 #mainNav .navbar-collapse .navbar-nav > li {
+  margin-left: 20px;
   text-align: center;
 }
 #mainNav .navbar-nav > li > a {
